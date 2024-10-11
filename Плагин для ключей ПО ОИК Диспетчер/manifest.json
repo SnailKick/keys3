@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "БД ключей ПО ОИК",
+  "version": "1.0",
+  "description": "Добавление лицензий в базу данных при выделении текста и автоматическое добавление url адреса",
+  
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

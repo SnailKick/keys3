@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить лицензию</title>
+    <style>
+        body {
+            background: #e2e2e2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Фиксированная ширина для контейнера */
+        }
+
+        #alert_message {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #c2c2c2;
+            color: #3b3b3b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #51a855a1;
+            transition: 0.5s; /* Время перехода */
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        a {
+            color: #3b3b3b; /* Серый цвет текста */
+            background: #c2c2c2; /* Синий цвет фона */
+            padding: 5px; /* Расстояние от текста до края */
+            transition: 0.5s; /* Время перехода */
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            color: #3b3b3b; /* Белый цвет текста */
+            background: #51a855a1; /* Синий цвет фона */
+        }
+    </style>
+    <!-- Подключаем локальный файл jQuery -->
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        
+        <div class="btn">
+            <button id="yesButton">Да</button>
+            <button id="noButton">Нет</button>
+        </div>
+        <div id="alert_message"></div>
+        <a href="http://локальный ip адрес/keys/index.php" target="_blank" class="btn">Перейти в таблицу</a>
+    </div>
+    <!-- Подключаем ваш JavaScript-файл -->
+    <script src="popup.js"></script>
+</body>
+</html>
